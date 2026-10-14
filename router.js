@@ -471,6 +471,200 @@ const rotas = {
       </div>
     </div>
   `,
+  novousuario: `
+    <div class="breadcrumb">Home / Usuários / Novo Usuário</div>
+    <div class="wrapper-principal">
+      <div class="header-pets">
+        <h1>Novo Usuário</h1>
+      </div>
+
+      <div class="wrapper-form">
+        <form onsubmit="event.preventDefault();">
+          <div class="grid-form">
+            <div style="display: flex; flex-direction: column; gap: 1rem">
+              <div class="campo-input">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="mail@server.com" />
+              </div>
+
+              <div class="campo-input">
+                <label for="nome">Nome *</label>
+                <input type="text" id="nome" name="nome" required placeholder="Nome do Usuário" />
+              </div>
+
+              <div class="campo-input">
+                <label for="sobrenome">Sobrenome *</label>
+                <input type="text" id="sobrenome" name="sobrenome" required placeholder="Sobrenome do Usuário" />
+              </div>
+
+              <div class="campo-input">
+                <label for="telefone">Telefone *</label>
+                <input type="tel" id="telefone" name="telefone" required placeholder="(11) 91234-5678" />
+              </div>
+
+              <div class="campo-input">
+                <label for="funcao">Função *</label>
+                <select id="funcao" name="funcao" required>
+                  <option value="" disabled></option>
+                  <option value="funcionario">Funcionário</option>
+                  <option value="cliente">Cliente</option>
+                  <option value="gerente">Gerente</option>
+                </select>
+              </div>
+
+              <div
+                class="form-acoes"
+                style="justify-content: space-between; margin-top: 2rem; width: 100%;"
+              >
+                <button type="submit" class="btn-principal" data-target="usuarios">
+                  <span>💾</span> Salvar
+                </button>
+                <button type="reset" class="btn-secundario" data-target="usuarios">
+                  <span>🔄</span> Limpar
+                </button>
+              </div>
+            </div>
+
+            <div class="campo-input">
+              <label>Foto do Perfil</label>
+              <div
+                style="
+                  width: 100%;
+                  height: 100%;
+                  min-height: 220px;
+                  background: #fff;
+                  border: 1px solid #b0b0b0;
+                  border-radius: 4px;
+                  position: relative;
+                "
+              >
+                <svg
+                  width="100%"
+                  height="100%"
+                  style="position: absolute; top: 0; left: 0"
+                >
+                  <line
+                    x1="0"
+                    y1="0"
+                    x2="100%"
+                    y2="100%"
+                    stroke="#a0a0a0"
+                    stroke-width="1.5"
+                  />
+                  <line
+                    x1="100%"
+                    y1="0"
+                    x2="0"
+                    y2="100%"
+                    stroke="#a0a0a0"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  `,
+  editarusuario: `
+    <div class="breadcrumb">Home / Usuários / Editar Usuário</div>
+    <div class="wrapper-principal">
+      <div class="header-pets">
+        <h1>Editar Usuário</h1>
+      </div>
+
+      <div class="wrapper-form">
+        <form onsubmit="event.preventDefault();">
+          <div class="grid-form">
+            <div
+              style="display: flex; flex-direction: column; gap: 1rem"
+            >
+              <div class="campo-input">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="mail@server.com" />
+              </div>
+
+              <div class="campo-input">
+                <label for="nome">Nome *</label>
+                <input type="text" id="nome" name="nome" required placeholder="Nome do Usuário" />
+              </div>
+
+              <div class="campo-input">
+                <label for="sobrenome">Sobrenome *</label>
+                <input type="text" id="sobrenome" name="sobrenome" required placeholder="Sobrenome do Usuário" />
+              </div>
+
+              <div class="campo-input">
+                <label for="telefone">Telefone *</label>
+                <input type="tel" id="telefone" name="telefone" required placeholder="(11) 91234-5678" />
+              </div>
+
+              <div class="campo-input">
+                <label for="funcao">Função *</label>
+                <select id="funcao" name="funcao" required>
+                  <option value="" disabled></option>
+                  <option value="funcionario">Funcionário</option>
+                  <option value="cliente">Cliente</option>
+                  <option value="gerente">Gerente</option>
+                </select>
+              </div>
+
+              <div
+                class="form-acoes"
+                style="justify-content: space-between; margin-top: 2rem; width: 100%;"
+              >
+                <button type="submit" class="btn-principal" data-target="usuarios">
+                  <span>💾</span> Salvar
+                </button>
+                <button type="reset" class="btn-secundario" data-target="usuarios">
+                  <span>🔄</span> Limpar
+                </button>
+              </div>
+            </div>
+
+            <div class="campo-input">
+              <label>Foto do Perfil</label>
+              <div
+                style="
+                  width: 100%;
+                  height: 100%;
+                  min-height: 220px;
+                  background: #fff;
+                  border: 1px solid #b0b0b0;
+                  border-radius: 4px;
+                  position: relative;
+                "
+              >
+                <svg
+                  width="100%"
+                  height="100%"
+                  style="position: absolute; top: 0; left: 0"
+                >
+                  <line
+                    x1="0"
+                    y1="0"
+                    x2="100%"
+                    y2="100%"
+                    stroke="#a0a0a0"
+                    stroke-width="1.5"
+                  />
+                  <line
+                    x1="100%"
+                    y1="0"
+                    x2="0"
+                    y2="100%"
+                    stroke="#a0a0a0"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  `,
   configuracoes: `
     <div class="breadcrumb">Home / Configurações</div>
     <div class="wrapper-principal">
