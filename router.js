@@ -90,15 +90,100 @@ const rotas = {
       <div class="header-pets">
         <h1>Novo Pet</h1>
       </div>
+
       <div class="wrapper-form">
         <form onsubmit="event.preventDefault();">
-          <div class="campo-input">
-            <label for="nome">Nome *</label>
-            <input type="text" id="nome" name="nome" required />
-          </div>
-          <div class="form-acoes" style="margin-top: 2rem;">
-            <button type="submit" class="btn-principal" data-target="pets">Salvar</button>
-            <button type="button" class="btn-secundario" data-target="pets">Cancelar</button>
+          <div class="grid-form">
+            <div style="display: flex; flex-direction: column; gap: 1rem">
+              <div class="campo-input">
+                <label for="proprietario">Proprietário *</label>
+                <input
+                  type="text"
+                  id="proprietario"
+                  name="proprietario"
+                  required
+                />
+              </div>
+
+              <div class="campo-input">
+                <label for="nome">Nome *</label>
+                <input type="text" id="nome" name="nome" required />
+              </div>
+
+              <div class="campo-input">
+                <label for="tipo">Tipo *</label>
+                <select id="tipo" name="tipo" required>
+                  <option value=""></option>
+                  <option value="cachorro">Cachorro</option>
+                  <option value="gato">Gato</option>
+                </select>
+              </div>
+
+              <div class="campo-input">
+                <label for="raca">Raça *</label>
+                <input type="text" id="raca" name="raca" required />
+              </div>
+
+              <div class="campo-input">
+                <label for="tamanho">Tamanho *</label>
+                <select id="tamanho" name="tamanho" required>
+                  <option value=""></option>
+                  <option value="pequeno">Pequeno</option>
+                  <option value="medio">Médio</option>
+                  <option value="grande">Grande</option>
+                </select>
+              </div>
+
+              <div
+                class="form-acoes"
+                style="justify-content: space-between; margin-top: 2rem; width: 100%;"
+              >
+                <button type="submit" class="btn-principal" data-target="pets">
+                  <span>💾</span> Salvar
+                </button>
+                <button type="reset" class="btn-secundario" data-target="pets">
+                  <span>🔄</span> Limpar
+                </button>
+              </div>
+            </div>
+
+            <div class="campo-input">
+              <label>Imagem</label>
+              <div
+                style="
+                  width: 100%;
+                  height: 100%;
+                  min-height: 220px;
+                  background: #fff;
+                  border: 1px solid #b0b0b0;
+                  border-radius: 4px;
+                  position: relative;
+                "
+              >
+                <svg
+                  width="100%"
+                  height="100%"
+                  style="position: absolute; top: 0; left: 0"
+                >
+                  <line
+                    x1="0"
+                    y1="0"
+                    x2="100%"
+                    y2="100%"
+                    stroke="#a0a0a0"
+                    stroke-width="1.5"
+                  />
+                  <line
+                    x1="100%"
+                    y1="0"
+                    x2="0"
+                    y2="100%"
+                    stroke="#a0a0a0"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
         </form>
       </div>
