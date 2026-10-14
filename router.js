@@ -195,9 +195,154 @@ const rotas = {
       <div class="header-pets">
         <h1>Editar Pet</h1>
       </div>
+
       <div class="wrapper-form">
-        <p>Formulário de edição de pet carregado dinamicamente.</p>
-        <button class="btn-secundario" data-target="pets">Voltar para Pets</button>
+        <form onsubmit="event.preventDefault();">
+          <div class="grid-form">
+            <div
+              style="display: flex; flex-direction: column; gap: 1rem"
+            >
+              <div class="campo-input">
+                <label for="nome">Nome *</label>
+                <input type="text" id="nome" name="nome" required />
+              </div>
+
+              <div class="campo-input">
+                <label for="tipo">Tipo *</label>
+                <select id="tipo" name="tipo" required>
+                  <option value=""></option>
+                  <option value="cachorro">Cachorro</option>
+                  <option value="gato">Gato</option>
+                </select>
+              </div>
+
+              <div class="campo-input">
+                <label for="raca">Raça *</label>
+                <input type="text" id="raca" name="raca" required />
+              </div>
+
+              <div class="campo-input">
+                <label for="tamanho">Tamanho *</label>
+                <select id="tamanho" name="tamanho" required>
+                  <option value=""></option>
+                  <option value="pequeno">Pequeno</option>
+                  <option value="medio">Médio</option>
+                  <option value="grande">Grande</option>
+                </select>
+              </div>
+
+              <div
+                class="form-acoes"
+                style="
+                  justify-content: space-between;
+                  margin-top: 2rem;
+                  width: 100%;
+                "
+              >
+                <button type="submit" class="btn-principal" data-target="pets">
+                  <span>💾</span> Salvar
+                </button>
+                <button type="reset" class="btn-secundario" data-target="pets">
+                  <span>🔄</span> Limpar
+                </button>
+              </div>
+            </div>
+
+            <div class="campo-input">
+              <label>Imagem</label>
+              <div
+                style="
+                  width: 100%;
+                  height: 100%;
+                  min-height: 220px;
+                  background: #fff;
+                  border: 1px solid #b0b0b0;
+                  border-radius: 4px;
+                  position: relative;
+                "
+              >
+                <svg
+                  width="100%"
+                  height="100%"
+                  style="position: absolute; top: 0; left: 0"
+                >
+                  <line
+                    x1="0"
+                    y1="0"
+                    x2="100%"
+                    y2="100%"
+                    stroke="#a0a0a0"
+                    stroke-width="1.5"
+                  />
+                  <line
+                    x1="100%"
+                    y1="0"
+                    x2="0"
+                    y2="100%"
+                    stroke="#a0a0a0"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  `,
+  verpet: `
+    <div class="breadcrumb">Home / Pets / Ver Pet</div>
+    <div class="wrapper-principal">
+      <div class="header-pets">
+        <h1>Ver Pet</h1>
+      </div>
+
+      <div class="header-pets">
+        <div class="botoes-redes">
+          <a href="#" class="btn-novo-pet" data-target="editarpet">✏️ Editar</a>
+          <a href="#" class="btn-novo-pet" style="color: #c62828;">🗑️ Deletar</a>
+        </div>
+      </div>
+
+      <div class="detalhes-container">
+        <div class="detalhes-grid">
+          <div class="label">Proprietário:</div>
+          <div class="valor">José da Silva</div>
+
+          <div class="label">Id:</div>
+          <div class="valor">1234509876</div>
+
+          <div class="label">Nome:</div>
+          <div class="valor">Max</div>
+
+          <div class="label">Tipo:</div>
+          <div class="valor">Cachorro</div>
+
+          <div class="label">Raça:</div>
+          <div class="valor">Pastor Alemão</div>
+
+          <div class="label">Imagem:</div>
+          <div class="valor">
+            <svg class="placeholder-img" viewBox="0 0 60 60" style="width: 60px; height: 60px;">
+              <line x1="0" y1="0" x2="60" y2="60" stroke="#a0a0a0" stroke-width="1.5" />
+              <line x1="60" y1="0" x2="0" y2="60" stroke="#a0a0a0" stroke-width="1.5" />
+            </svg>
+          </div>
+
+          <div class="label">Reservas:</div>
+          <div class="valor">
+            <p>
+              <a href="#" data-target="reservas" class="link-criar-conta">02/05/2021 - 07/05/2021 (completa)</a>
+            </p>
+            <p>
+              <a href="#" data-target="reservas" class="link-secundario">02/05/2021 - 07/05/2021 (em andamento)</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-pets" style="margin-top: 2rem;">
+        <a href="#" class="btn-novo-pet" data-target="pets">← Voltar</a>
       </div>
     </div>
   `,
